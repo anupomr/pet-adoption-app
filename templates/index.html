@@ -2,16 +2,13 @@
 <html>
 <head><title>Adoptable Pets</title></head>
 <body>
-  <h1>Adoptable Pets</h1>
-  <a href="/upload">Add a Pet</a>
-  <ul>
-    {% for pet in pets %}
-      <li>
-        <img src="{{ pet.image }}" width="150"/><br>
-        <strong>{{ pet.name }}</strong> - {{ pet.age }} yrs - {{ pet.breed }}
-      </li>
-    {% endfor %}
-  </ul>
+<h1>Adoptable Pets</h1>
+<a href="/add">Add a New Pet</a>
+<ul>
+  {% for pet in pets %}
+    <li><a href="/pet/{{ pet.name }}">{{ pet.name }}</a> - {{ pet.breed }}</li>
+  {% endfor %}
+</ul>
 </body>
 </html>
 
